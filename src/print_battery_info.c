@@ -656,6 +656,11 @@ void print_battery_info(battery_info_ctx_t *ctx) {
         }
     }
 
+    if (batt_info.status == CS_CHARGING) {
+        START_COLOR("color_good");
+        colorful_output = true;
+    }
+
     char string_status[STRING_SIZE];
     char string_percentage[STRING_SIZE];
     // following variables are not alwasy set. If they are not set they should be empty.
