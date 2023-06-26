@@ -656,7 +656,7 @@ void print_battery_info(battery_info_ctx_t *ctx) {
         }
     }
 
-    if (batt_info.status == CS_CHARGING) {
+    if (batt_info.status == CS_CHARGING || batt_info.status == CS_FULL) {
         START_COLOR("color_good");
         colorful_output = true;
     }
